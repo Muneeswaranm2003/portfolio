@@ -113,7 +113,7 @@ function App() {
     <main>
       <section className="hero section-wrap" id="home">
         <div className="hero-copy">
-          <Reveal><div className="eyebrow"><span className="eyebrow-dot" /> MUNEESWARAN M — DATA ENGINEER</div></Reveal>
+          <Reveal><div className="eyebrow"><span className="eyebrow-dot" /> MUNEESWARAN M — EMAIL, DATA, CLOUD</div></Reveal>
           <Reveal delay={0.08}><h1>Data, cloud &amp;<br />email systems that <span className="gradient-text">deliver</span><span className="orange">.</span></h1></Reveal>
           <Reveal delay={0.16}><p className="hero-description">Data Engineer | AWS Cloud | Email Infrastructure &amp; Deliverability. I build practical pipelines, automation and email systems, and I run GoAurex.</p></Reveal>
           <Reveal delay={0.23}><div className="hero-tags"><span><Database size={14} /> Data Engineering</span><span><Cloud size={14} /> AWS Cloud</span><span><MailCheck size={14} /> Email Infrastructure</span></div></Reveal>
