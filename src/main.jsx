@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
+const BASE = import.meta.env.BASE_URL;
 const GITHUB = 'https://github.com/Muneeswaranm2003';
 const projects = [
   {
@@ -50,9 +51,9 @@ const experience = [
 
 const logo = (slug, color) => `https://cdn.simpleicons.org/${slug}/${color}`;
 const emailTools = [
-  ['Amazon SES', '/logos/ses.png'], ['SMTP', null], ['Mailwizz', '/logos/mailwizz.png'], ['Gmass', '/logos/gmass.png'],
-  ['SendGrid', '/logos/sendgrid.png'], ['Elastic Email', '/logos/elasticemail.png'], ['Mailchimp', logo('mailchimp', 'FFE01B')],
-  ['Brevo', logo('brevo', '0B996E')], ['Lemlist', '/logos/lemlist.png'], ['Reply.io', '/logos/replyio.png']
+  ['Amazon SES', BASE + 'logos/ses.png'], ['SMTP', null], ['Mailwizz', BASE + 'logos/mailwizz.png'], ['Gmass', BASE + 'logos/gmass.png'],
+  ['SendGrid', BASE + 'logos/sendgrid.png'], ['Elastic Email', BASE + 'logos/elasticemail.png'], ['Mailchimp', logo('mailchimp', 'FFE01B')],
+  ['Brevo', logo('brevo', '0B996E')], ['Lemlist', BASE + 'logos/lemlist.png'], ['Reply.io', BASE + 'logos/replyio.png']
 ];
 const stack = [
   ['Python', [['python', '5FA8E8']]],
@@ -189,7 +190,7 @@ function App() {
       </section>
 
       <section className="section-wrap contact-section" id="contact">
-        <Reveal><div className="contact-card"><div className="contact-orb" /><div className="section-label">06 / NEXT UP</div><h2>Have a good problem?<br /><span className="gradient-text">Let's build a solution.</span></h2><p>Data engineering, AWS, email infrastructure, deliverability or GoAurex services: I'd be glad to connect.</p><div className="contact-actions"><a className="button button-primary" href="mailto:muneeswaran@goaurex.com">Get in touch <ArrowUpRight size={17} /></a><a className="button button-secondary" href="https://goaurex.com" target="_blank" rel="noreferrer"><img className="btn-logo" src="/goaurex.png" alt="" width="20" height="20" /> goaurex.com</a><a className="button button-secondary" href="https://mailverify.pro" target="_blank" rel="noreferrer"><img className="btn-logo" src="/mailverifypro.png" alt="" width="20" height="20" /> mailverify.pro</a></div></div></Reveal>
+        <Reveal><div className="contact-card"><div className="contact-orb" /><div className="section-label">06 / NEXT UP</div><h2>Have a good problem?<br /><span className="gradient-text">Let's build a solution.</span></h2><p>Data engineering, AWS, email infrastructure, deliverability or GoAurex services: I'd be glad to connect.</p><div className="contact-actions"><a className="button button-primary" href="mailto:muneeswaran@goaurex.com">Get in touch <ArrowUpRight size={17} /></a><a className="button button-secondary" href="https://goaurex.com" target="_blank" rel="noreferrer"><img className="btn-logo" src={`${BASE}goaurex.png`} alt="" width="20" height="20" /> goaurex.com</a><a className="button button-secondary" href="https://mailverify.pro" target="_blank" rel="noreferrer"><img className="btn-logo" src={`${BASE}mailverifypro.png`} alt="" width="20" height="20" /> mailverify.pro</a></div></div></Reveal>
       </section>
     </main>
     <footer className="footer section-wrap"><a className="brand footer-brand" href="#home"><span className="brand-mark">M</span><span>MUNEESWARAN<small>.DEV</small></span></a><div className="socials"><a href={GITHUB} aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={17} /></a><a href="https://www.linkedin.com/in/muneeswaran-m-0aa120203/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={17} /></a><a href="mailto:muneeswaran@goaurex.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top ↑</a></footer>
