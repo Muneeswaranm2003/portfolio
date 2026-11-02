@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, Github, Linkedin, Mail,
   Menu, X, Database, Cloud, MailCheck, Rocket, Code2, GitBranch,
-  Layers3, Terminal, Cpu, Globe, Zap, ExternalLink, MapPin, Download
+  Layers3, GraduationCap, Terminal, Cpu, Globe, Zap, ExternalLink, MapPin, Download
 } from 'lucide-react';
 import './styles.css';
 
@@ -86,9 +86,9 @@ function HeroVisual() {
           <div className="screen-top"><span /><span /><span /><b>muneeswaran.dev</b></div>
           <div className="code-lines">
             <p><i>01</i> <span className="code-purple">const</span> engineer = {'{'}</p>
-            <p><i>02</i> &nbsp; focus: <span className="code-orange">'data'</span>,</p>
-            <p><i>03</i> &nbsp; cloud: <span className="code-green">true</span>,</p>
-            <p><i>04</i> &nbsp; email: <span className="code-green">'reliable'</span></p>
+            <p><i>02</i> &nbsp; focus: <span className="code-orange">'email + data'</span>,</p>
+            <p><i>03</i> &nbsp; cloud: <span className="code-green">'aws'</span>,</p>
+            <p><i>04</i> &nbsp; founder: <span className="code-green">'GoAurex'</span></p>
             <p><i>05</i> {'}'}</p>
             <p className="code-cursor"><i>06</i> <span>▍</span></p>
           </div>
@@ -146,7 +146,7 @@ function App() {
           <Reveal delay={0.12} className="about-cards">
             <div className="mini-card"><span className="mini-icon orange-bg"><Database /></span><div><h3>Data pipelines</h3><p>ETL, validation and analytics with Python, SQL, PySpark and Kafka.</p></div><ArrowUpRight className="mini-arrow" size={16} /></div>
             <div className="mini-card"><span className="mini-icon purple-bg"><Cloud /></span><div><h3>Cloud systems</h3><p>AWS, Docker, Terraform and Linux deployments.</p></div><ArrowUpRight className="mini-arrow" size={16} /></div>
-            <div className="mini-card"><span className="mini-icon blue-bg"><MailCheck /></span><div><h3>Email engineering</h3><p>Validation, SES events, SPF/DKIM/DMARC and warm-up.</p></div><ArrowUpRight className="mini-arrow" size={16} /></div>
+            <div className="mini-card"><span className="mini-icon blue-bg"><MailCheck /></span><div><h3>Email engineering</h3><p>Validation, SES events, SPF/DKIM/DMARC and warm-up.</p></div><ArrowUpRight className="mini-arrow" size={16} /></div><div className="mini-card"><span className="mini-icon orange-bg"><GraduationCap /></span><div><h3>Education</h3><p>B.E. Computer Science and Engineering, Sri Shakthi Institute of Engineering and Technology.</p></div></div>
           </Reveal>
         </div>
       </section>
