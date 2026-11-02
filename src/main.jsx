@@ -42,17 +42,18 @@ const services = [
 
 const experience = [
   ['Founder-led', 'GoAurex / MailVerifyPro', 'Founder / Builder', 'Building GoAurex, a technology services brand for data, cloud and email solutions, and MailVerifyPro, its email validation platform.'],
-  ['Current', 'Ultraship', 'Email Infrastructure / Software Implementation Engineer', 'Software implementation alongside email infrastructure work: email delivery performance, validation status, bounce and suppression issues, and deliverability troubleshooting.'],
+  ['Current', 'Ultraship', 'Email Infrastructure / Software Engineer', 'Software engineering alongside email infrastructure work: email delivery performance, validation status, bounce and suppression issues, and deliverability troubleshooting.'],
   ['Jun 2025 — Nov 2025', 'Regami Solutions', 'Junior Executive, SBD / Email Marketing Specialist', 'Email marketing operations and campaign execution, with a focus on infrastructure and deliverability troubleshooting.'],
   ['Jun 2024 — Jan 2025', 'Klodev', 'Junior Data Engineer', 'Data pipelines, email analytics, and data processing and operational analysis workflows.'],
   ['May 2023 — May 2024', 'Infynd', 'Junior Data Engineer Intern', 'Email-generation patterns and email validation tasks, with hands-on exposure to data quality.']
 ];
 
-const emailTools = [
-  ['Amazon SES', null], ['SMTP', null], ['Mailwizz', null], ['Gmass', null], ['SendGrid', null],
-  ['Elastic Email', null], ['Mailchimp', ['mailchimp', 'FFE01B']], ['Brevo', ['brevo', '0B996E']], ['Lemlist', null], ['Reply.io', null]
-];
 const logo = (slug, color) => `https://cdn.simpleicons.org/${slug}/${color}`;
+const emailTools = [
+  ['Amazon SES', '/logos/ses.png'], ['SMTP', null], ['Mailwizz', '/logos/mailwizz.png'], ['Gmass', '/logos/gmass.png'],
+  ['SendGrid', '/logos/sendgrid.png'], ['Elastic Email', '/logos/elasticemail.png'], ['Mailchimp', logo('mailchimp', 'FFE01B')],
+  ['Brevo', logo('brevo', '0B996E')], ['Lemlist', '/logos/lemlist.png'], ['Reply.io', '/logos/replyio.png']
+];
 const stack = [
   ['Python', [['python', '5FA8E8']]],
   ['SQL / PostgreSQL', [['postgresql', '6FA0E8']]],
@@ -158,7 +159,7 @@ function App() {
       <section className="section-wrap section-block" id="stack">
         <Reveal><div className="section-label">02 / TOOLKIT</div><div className="section-heading-row"><h2>Tools of the <span className="gradient-text">trade.</span></h2><p>Technologies I work with and continue to explore.</p></div></Reveal>
         <div className="stack-grid">{stack.map(([name, logos], i) => <Reveal key={name} delay={i * 0.035}><div className="stack-card"><span className={`stack-glyph glyph-${i}`}>{logos ? logos.map(([slug, color]) => <img key={slug} src={logo(slug, color)} alt="" width="18" height="18" loading="lazy" />) : <b className="aws-text">aws</b>}</span><span>{name}</span><ArrowUpRight size={13} className="stack-arrow" /></div></Reveal>)}</div>
-      <Reveal><div className="email-tools"><div className="email-tools-label"><Mail size={15} /> Email marketing &amp; sending tools</div><div className="project-tags">{emailTools.map(([t, l]) => <span key={t} className="tool-chip">{l ? <img src={logo(l[0], l[1])} alt="" width="14" height="14" /> : <i>{t[0]}</i>}{t}</span>)}</div></div></Reveal>
+      <Reveal><div className="email-tools"><div className="email-tools-label"><Mail size={15} /> Email marketing &amp; sending tools</div><div className="project-tags">{emailTools.map(([t, l]) => <span key={t} className="tool-chip">{l ? <img className="tool-logo" src={l} alt="" width="16" height="16" /> : <Mail size={14} />}{t}</span>)}</div></div></Reveal>
       </section>
 
       <section className="section-wrap section-block" id="services">
@@ -191,7 +192,7 @@ function App() {
         <Reveal><div className="contact-card"><div className="contact-orb" /><div className="section-label">06 / NEXT UP</div><h2>Have a good problem?<br /><span className="gradient-text">Let's build a solution.</span></h2><p>Data engineering, AWS, email infrastructure, deliverability or GoAurex services: I'd be glad to connect.</p><div className="contact-actions"><a className="button button-primary" href="mailto:muneeswaran@goaurex.com">Get in touch <ArrowUpRight size={17} /></a><a className="button button-secondary" href="https://goaurex.com" target="_blank" rel="noreferrer"><img className="btn-logo" src="/goaurex.png" alt="" width="20" height="20" /> goaurex.com</a><a className="button button-secondary" href="https://mailverify.pro" target="_blank" rel="noreferrer"><img className="btn-logo" src="/mailverifypro.png" alt="" width="20" height="20" /> mailverify.pro</a></div></div></Reveal>
       </section>
     </main>
-    <footer className="footer section-wrap"><a className="brand footer-brand" href="#home"><span className="brand-mark">M</span><span>MUNEESWARAN<small>.DEV</small></span></a><div className="footer-links"><a href="https://goaurex.com" target="_blank" rel="noreferrer"><img src="/goaurex.png" alt="" width="14" height="14" />goaurex.com</a><a href="https://mailverify.pro" target="_blank" rel="noreferrer"><img src="/mailverifypro.png" alt="" width="14" height="14" />mailverify.pro</a></div><div className="socials"><a href={GITHUB} aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={17} /></a><a href="https://www.linkedin.com/in/muneeswaran-m-0aa120203/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={17} /></a><a href="mailto:muneeswaran@goaurex.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top ↑</a></footer>
+    <footer className="footer section-wrap"><a className="brand footer-brand" href="#home"><span className="brand-mark">M</span><span>MUNEESWARAN<small>.DEV</small></span></a><div className="socials"><a href={GITHUB} aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={17} /></a><a href="https://www.linkedin.com/in/muneeswaran-m-0aa120203/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={17} /></a><a href="mailto:muneeswaran@goaurex.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top ↑</a></footer>
   </div>;
 }
 
