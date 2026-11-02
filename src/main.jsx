@@ -48,10 +48,18 @@ const experience = [
   ['May 2023 — May 2024', 'Infynd', 'Junior Data Engineer Intern', 'Email-generation patterns and email validation tasks, with hands-on exposure to data quality.']
 ];
 
+const logo = (slug, color) => `https://cdn.simpleicons.org/${slug}/${color}`;
 const stack = [
-  ['Python', 'PY'], ['SQL / PostgreSQL', 'DB'], ['AWS (SES, S3, Lambda)', 'AWS'],
-  ['Docker', 'DK'], ['Terraform', 'TF'], ['Kafka / PySpark', 'KF'],
-  ['Redis / BullMQ', 'RD'], ['React / Vite', 'RE'], ['Linux', 'LX'], ['n8n / Selenium', 'N8']
+  ['Python', [['python', '5FA8E8']]],
+  ['SQL / PostgreSQL', [['postgresql', '6FA0E8']]],
+  ['AWS (SES, S3, Lambda)', null],
+  ['Docker', [['docker', '2496ED']]],
+  ['Terraform', [['terraform', 'A77BFF']]],
+  ['Kafka / PySpark', [['apachekafka', 'FFFFFF'], ['apachespark', 'FF8A31']]],
+  ['Redis / BullMQ', [['redis', 'FF5A4A']]],
+  ['React / Vite', [['react', '61DAFB'], ['vite', 'A78BFA']]],
+  ['Linux', [['linux', 'FCC624']]],
+  ['n8n / Selenium', [['n8n', 'FF6D5A'], ['selenium', '5FD068']]]
 ];
 
 function Reveal({ children, delay = 0, className = '' }) {
@@ -145,7 +153,7 @@ function App() {
 
       <section className="section-wrap section-block" id="stack">
         <Reveal><div className="section-label">02 / TOOLKIT</div><div className="section-heading-row"><h2>Tools of the <span className="gradient-text">trade.</span></h2><p>Technologies I work with and continue to explore.</p></div></Reveal>
-        <div className="stack-grid">{stack.map(([name, code], i) => <Reveal key={name} delay={i * 0.035}><div className="stack-card"><span className={`stack-glyph glyph-${i}`}>{code}</span><span>{name}</span><ArrowUpRight size={13} className="stack-arrow" /></div></Reveal>)}</div>
+        <div className="stack-grid">{stack.map(([name, logos], i) => <Reveal key={name} delay={i * 0.035}><div className="stack-card"><span className={`stack-glyph glyph-${i}`}>{logos ? logos.map(([slug, color]) => <img key={slug} src={logo(slug, color)} alt="" width="18" height="18" loading="lazy" />) : <b className="aws-text">aws</b>}</span><span>{name}</span><ArrowUpRight size={13} className="stack-arrow" /></div></Reveal>)}</div>
       </section>
 
       <section className="section-wrap section-block" id="services">
