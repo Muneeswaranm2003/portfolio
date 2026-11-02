@@ -48,6 +48,7 @@ const experience = [
   ['May 2023 — May 2024', 'Infynd', 'Junior Data Engineer Intern', 'Email-generation patterns and email validation tasks, with hands-on exposure to data quality.']
 ];
 
+const emailTools = ['Amazon SES', 'SMTP', 'Mailwizz', 'Gmass', 'SendGrid', 'Elastic Email', 'Mailchimp', 'Brevo', 'Lemlist', 'Reply.io'];
 const logo = (slug, color) => `https://cdn.simpleicons.org/${slug}/${color}`;
 const stack = [
   ['Python', [['python', '5FA8E8']]],
@@ -154,6 +155,7 @@ function App() {
       <section className="section-wrap section-block" id="stack">
         <Reveal><div className="section-label">02 / TOOLKIT</div><div className="section-heading-row"><h2>Tools of the <span className="gradient-text">trade.</span></h2><p>Technologies I work with and continue to explore.</p></div></Reveal>
         <div className="stack-grid">{stack.map(([name, logos], i) => <Reveal key={name} delay={i * 0.035}><div className="stack-card"><span className={`stack-glyph glyph-${i}`}>{logos ? logos.map(([slug, color]) => <img key={slug} src={logo(slug, color)} alt="" width="18" height="18" loading="lazy" />) : <b className="aws-text">aws</b>}</span><span>{name}</span><ArrowUpRight size={13} className="stack-arrow" /></div></Reveal>)}</div>
+      <Reveal><div className="email-tools"><div className="email-tools-label"><Mail size={15} /> Email marketing &amp; sending tools</div><div className="project-tags">{emailTools.map(t => <span key={t}>{t}</span>)}</div></div></Reveal>
       </section>
 
       <section className="section-wrap section-block" id="services">
@@ -183,10 +185,10 @@ function App() {
       </section>
 
       <section className="section-wrap contact-section" id="contact">
-        <Reveal><div className="contact-card"><div className="contact-orb" /><div className="section-label">06 / NEXT UP</div><h2>Have a good problem?<br /><span className="gradient-text">Let's build a solution.</span></h2><p>Data engineering, AWS, email infrastructure, deliverability or GoAurex services: I'd be glad to connect.</p><div className="contact-actions"><a className="button button-primary" href="mailto:muneeswaran@goaurex.com">Get in touch <ArrowUpRight size={17} /></a><a className="button button-secondary" href={GITHUB} target="_blank" rel="noreferrer"><Github size={17} /> Follow my work</a></div></div></Reveal>
+        <Reveal><div className="contact-card"><div className="contact-orb" /><div className="section-label">06 / NEXT UP</div><h2>Have a good problem?<br /><span className="gradient-text">Let's build a solution.</span></h2><p>Data engineering, AWS, email infrastructure, deliverability or GoAurex services: I'd be glad to connect.</p><div className="contact-actions"><a className="button button-primary" href="mailto:muneeswaran@goaurex.com">Get in touch <ArrowUpRight size={17} /></a><a className="button button-secondary" href="https://goaurex.com" target="_blank" rel="noreferrer"><Globe size={17} /> goaurex.com</a><a className="button button-secondary" href="https://mailverify.pro" target="_blank" rel="noreferrer"><MailCheck size={17} /> mailverify.pro</a></div></div></Reveal>
       </section>
     </main>
-    <footer className="footer section-wrap"><a className="brand footer-brand" href="#home"><span className="brand-mark">M</span><span>MUNEESWARAN<small>.DEV</small></span></a><span>Designed with curiosity. Built with intent.</span><div className="socials"><a href={GITHUB} aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={17} /></a><a href="https://www.linkedin.com/in/muneeswaran-m-0aa120203/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={17} /></a><a href="mailto:muneeswaran@goaurex.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top ↑</a></footer>
+    <footer className="footer section-wrap"><a className="brand footer-brand" href="#home"><span className="brand-mark">M</span><span>MUNEESWARAN<small>.DEV</small></span></a><div className="footer-links"><a href="https://goaurex.com" target="_blank" rel="noreferrer">goaurex.com</a><a href="https://mailverify.pro" target="_blank" rel="noreferrer">mailverify.pro</a></div><div className="socials"><a href={GITHUB} aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={17} /></a><a href="https://www.linkedin.com/in/muneeswaran-m-0aa120203/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={17} /></a><a href="mailto:muneeswaran@goaurex.com" aria-label="Email"><Mail size={17} /></a></div><a className="back-top" href="#home">Back to top ↑</a></footer>
   </div>;
 }
 
