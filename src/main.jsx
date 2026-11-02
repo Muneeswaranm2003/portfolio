@@ -41,11 +41,11 @@ const services = [
 ];
 
 const experience = [
-  ['Current', 'Ultraship', 'Email Infrastructure / Software Engineer', 'Email delivery performance, validation status, bounce and suppression issues, and deliverability troubleshooting.'],
+  ['Founder-led', 'GoAurex / MailVerifyPro', 'Founder / Builder', 'Building GoAurex, a technology services brand for data, cloud and email solutions, and MailVerifyPro, its email validation platform.'],
+  ['Current', 'Ultraship', 'Email Infrastructure / Software Implementation Engineer', 'Software implementation alongside email infrastructure work: email delivery performance, validation status, bounce and suppression issues, and deliverability troubleshooting.'],
   ['Jun 2025 — Nov 2025', 'Regami Solutions', 'Junior Executive, SBD / Email Marketing Specialist', 'Email marketing operations and campaign execution, with a focus on infrastructure and deliverability troubleshooting.'],
   ['Jun 2024 — Jan 2025', 'Klodev', 'Junior Data Engineer', 'Data pipelines, email analytics, and data processing and operational analysis workflows.'],
-  ['May 2023 — May 2024', 'Infynd', 'Junior Data Engineer Intern', 'Email-generation patterns and email validation tasks, with hands-on exposure to data quality.'],
-  ['Founder-led', 'GoAurex', 'Founder / Builder', 'Building a technology services brand for data, cloud and email solutions, including its website and service positioning.']
+  ['May 2023 — May 2024', 'Infynd', 'Junior Data Engineer Intern', 'Email-generation patterns and email validation tasks, with hands-on exposure to data quality.']
 ];
 
 const stack = [
